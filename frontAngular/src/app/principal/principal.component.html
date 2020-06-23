@@ -1,0 +1,102 @@
+<div class="container">
+  <!--Section: Features v.3-->
+  <section>
+    <!--Section heading-->
+    <h1 class="h1 py-5 font-weight-bold text-center">
+      Top 3 departamentos con más casos
+    </h1>
+
+    <!--Grid row-->
+    <div class="row pt-2">
+      <!--Grid column-->
+      <div class="col-lg-5 text-center text-lg-left">
+        <img
+          src="../../assets/Departamentos_de_Guatemala.png"
+          class="img-fluid z-depth-0"
+          width="90%" 
+        />
+      </div>
+      <!--Grid column-->
+
+      <!--Grid column-->
+      <div class="col-lg-7">
+        <!--Grid row-->
+        <div class="row pb-3">
+          <div class="col-2 col-md-1">
+            <mdb-icon
+              fas
+              icon="globe-americas"
+              size="lg"
+              class="red-text"
+            ></mdb-icon>
+          </div>
+          <div class="col-10">
+            <h2 class="font-weight-bold text-left mb-3 dark-grey-text">
+              Departamento 1
+            </h2>
+            <h3 class="grey-text text-left">{{ departamento1 }}</h3>
+          </div>
+        </div>
+        <!--Grid row-->
+
+        <!--Grid row-->
+        <div class="row pb-3">
+          <div class="col-2 col-md-1">
+            <mdb-icon
+              fas
+              icon="globe-americas"
+              size="lg"
+              class="blue-text"
+            ></mdb-icon>
+          </div>
+          <div class="col-10">
+            <h2 class="font-weight-bold text-left mb-3 dark-grey-text">
+              Departamento 2
+            </h2>
+            <h3 class="grey-text text-left">{{ departamento2 }}</h3>
+          </div>
+        </div>
+        <!--Grid row-->
+
+        <!--Grid row-->
+        <div class="row pb-3">
+          <div class="col-2 col-md-1">
+            <mdb-icon
+              fas
+              icon="globe-americas"
+              size="lg"
+              class="green-text"
+            ></mdb-icon>
+          </div>
+          <div class="col-10">
+            <h2 class="font-weight-bold text-left mb-3 dark-grey-text">
+              Departamento 3
+            </h2>
+            <h3 class="grey-text text-left">{{ departamento3 }}</h3>
+          </div>
+        </div>
+        <!--Grid row-->
+      </div>
+      <!--Grid column-->
+    </div>
+    <!--Grid row-->
+  </section>
+  <!--Section: Features v.3-->
+</div>
+<br /><br />
+<div class="container">
+  <div class="media">
+    <img
+      class="d-flex align-self-center mr-3"
+      src="../../assets/virus.jpg"
+      width="20%" height="20%"
+    />
+    <div class="media-body">
+      <h2 class="mt-0 font-weight-bold">Último caso agregado</h2>
+      <h4><b>Nombre:</b> {{ultimoCaso.Nombre}}</h4>
+      <h4><b>Departamento:</b> {{ultimoCaso.Departamento}}</h4>
+      <h4><b>Edad:</b> {{ultimoCaso.Edad}}</h4>
+      <h4><b>Forma de contagio:</b> {{ultimoCaso.Forma}}</h4>
+    </div>
+  </div>
+</div>

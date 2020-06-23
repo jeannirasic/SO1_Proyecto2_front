@@ -1,0 +1,39 @@
+<br /><br />
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <h1 align="center">Afectados por rango de edades</h1>
+      <div style="display: block">
+        <canvas
+          mdbChart
+          [chartType]="tipoBar"
+          [datasets]="setDatosBar"
+          [labels]="labelsBar"
+          [colors]="coloresBar"
+          [options]="opcionesBar"
+          [legend]="true"
+          (chartHover)="barHovered($event)"
+          (chartClick)="barClicked($event)"
+        >
+        </canvas>
+      </div>
+    </div>
+    <div class="col">
+      <h1 align="center">Casos por departamento</h1>
+      <div style="display: block">
+        <canvas
+          mdbChart
+          [chartType]="tipoPie"
+          [datasets]="setDatosPie"
+          [labels]="labelsPie"
+          [colors]="coloresPie"
+          [options]="opcionesPie"
+          [legend]="true"
+          (chartHover)="pieHovered($event)"
+          (chartClick)="pieClicked($event)"
+        >
+        </canvas>
+      </div>
+    </div>
+  </div>
+</div>
