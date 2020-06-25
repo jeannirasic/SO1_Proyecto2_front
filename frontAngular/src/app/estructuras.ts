@@ -1,4 +1,5 @@
 export interface Estructura{
+    Id?: number;
     Nombre: string;
     Departamento: string;
     Edad: number;
@@ -7,6 +8,7 @@ export interface Estructura{
 }
 
 export interface Departamentos {
-    id: string;
+    id?: string;
     Departamento: string;
+    Cantidad?: number;
 }

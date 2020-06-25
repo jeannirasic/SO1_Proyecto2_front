@@ -20,5 +20,15 @@ export class ServicioService {
     return this.http.get<Departamentos[]>(this.url + 'departamentos');
   }
   // Los metodos de redis-------------------------------------------------------------------------------------------------------------------
+  obtenerClaves(){
+    return this.http.get<string>(this.url + 'claves');
+  }
 
+  obtenerUltimoCaso(id: string){
+    return this.http.get<Estructura>(this.url + 'ultimoCaso/' + id);
+  }
+
+  obtenerEdades(id: string){
+    return this.http.get<number>(this.url + 'edades/' + id);
+  }
 }
