@@ -22,8 +22,10 @@ export class GraficasComponent implements OnInit {
 
   public coloresPie: Array<any> = [
     {
-      backgroundColor: ['#F7464A', '#46BFBD', '#FDB45C', '#949FB1', '#4D5360'],
-      hoverBackgroundColor: ['#FF5A5E', '#5AD3D1', '#FFC870', '#A8B3C5', '#616774'],
+      backgroundColor: ['#ffed78', '#fffb00', '#ff0000', '#d94c61', '#ff85c2', '#b0047c', '#990b52', '#FDB45C', '#ff9100', '#003cff',
+      '#00ccff', '#46BFBD', '#00f7c1', '#4300f7', '#00ff55', '#009431', '#cf8065', '#8f4228', '#949FB1', '#756d6a', '#4D5360', '#292523'],
+      hoverBackgroundColor: ['#f7eda8', '#f2f06f', '#f26f6f', '#db5a6d', '#e68cb9', '#cf1b98', '#ad1863', '#FFC870', '#f0c286', '#869ff0',
+      '#95e2f5', '#5AD3D1', '#89f5dd', '#6262e3', '#52ff8b', '#459660', '#cc927e', '#8f5d4c', '#A8B3C5', '#968d89', '#616774', '#4d4846'],
       borderWidth: 2,
     }
   ];
@@ -45,20 +47,30 @@ export class GraficasComponent implements OnInit {
   public coloresBar: Array<any> = [
     {
       backgroundColor: [
-        'rgba(255, 99, 132, 0.2)',
-        'rgba(54, 162, 235, 0.2)',
-        'rgba(255, 206, 86, 0.2)',
-        'rgba(75, 192, 192, 0.2)',
-        'rgba(153, 102, 255, 0.2)',
-        'rgba(255, 159, 64, 0.2)'
+        'rgb(255, 255, 153)',
+        'rgb(255, 102, 102)',
+        'rgb(255, 179, 236)',
+        'rgb(255, 191, 128)',
+        'rgb(51, 102, 255)',
+        'rgb(179, 255, 255)',
+        'rgb(187, 153, 255)',
+        'rgb(204, 255, 204)',
+        'rgb(121, 210, 121)',
+        'rgb(153, 77, 0)',
+        'rgb(51, 51, 51)'
       ],
       borderColor: [
-        'rgba(255,99,132,1)',
-        'rgba(54, 162, 235, 1)',
-        'rgba(255, 206, 86, 1)',
-        'rgba(75, 192, 192, 1)',
-        'rgba(153, 102, 255, 1)',
-        'rgba(255, 159, 64, 1)'
+        'rgb(255, 255, 0)',
+        'rgb(255, 0, 0)',
+        'rgb(255, 51, 204)',
+        'rgb(255, 153, 51)',
+        'rgb(0, 51, 204)',
+        'rgb(102, 255, 255)',
+        'rgb(153, 102, 255)',
+        'rgb(153, 255, 153)',
+        'rgb(51, 153, 51)',
+        'rgb(102, 51, 0)',
+        'rgb(0, 0, 0)'
       ],
       borderWidth: 2,
     }
@@ -141,7 +153,7 @@ export class GraficasComponent implements OnInit {
     this.labelsBar = this.etiquetasRedis;
     this.valoresRedis = temporal;
     this.setDatosBar = [{ data: this.valoresRedis, label: 'Rangos de edades' }];
-    console.log(this.setDatosBar);
+    // console.log(this.setDatosBar);
   }
 
   ngOnInit(): void {

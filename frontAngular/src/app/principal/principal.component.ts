@@ -57,7 +57,15 @@ export class PrincipalComponent implements OnInit {
 
   actualizarCasos(){
     this.servicio.obtenerClaves().subscribe(data => {
-      this.servicio.obtenerUltimoCaso(data[0]).subscribe(data1 => {
+      console.log(data);
+      // tslint:disable-next-line:prefer-for-of
+      for (let i = 0; i < data.length; i++) {
+        this.servicio.obtenerUltimoCaso(data[i]).subscribe(data1 => {
+          data1.Id = Number(data[i]);
+          console.log(data1);
+        });
+      }
+      this.servicio.obtenerUltimoCaso(data[data.length - 1]).subscribe(data1 => {
         this.ultimoCaso = data1;
       }, error => {
         alert('Error al obtener los datos');
