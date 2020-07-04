@@ -59,13 +59,14 @@ export class PrincipalComponent implements OnInit {
     this.servicio.obtenerClaves().subscribe(data => {
       console.log(data);
       // tslint:disable-next-line:prefer-for-of
-      for (let i = 0; i < data.length; i++) {
+      /*for (let i = 0; i < data.length; i++) {
         this.servicio.obtenerUltimoCaso(data[i]).subscribe(data1 => {
           data1.Id = Number(data[i]);
           console.log(data1);
         });
-      }
-      this.servicio.obtenerUltimoCaso(data[data.length - 1]).subscribe(data1 => {
+      }*/
+      const ultimo = this.obtenerUltimo(data);
+      this.servicio.obtenerUltimoCaso(ultimo.toString()).subscribe(data1 => {
         this.ultimoCaso = data1;
       }, error => {
         alert('Error al obtener los datos');
@@ -73,6 +74,13 @@ export class PrincipalComponent implements OnInit {
     }, error => {
       alert('Error al obtener los datos');
     });
+  }
+
+  obtenerUltimo(arreglo: string[]): number {
+    let mayor = 0;
+    const arrayOfNumbers = arreglo.map(Number);
+    mayor = Math.max.apply(null, arrayOfNumbers);
+    return mayor;
   }
 
   obtenerMayor(arreglo: Departamentos[]): string{

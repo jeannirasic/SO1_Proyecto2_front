@@ -6,8 +6,9 @@ import { HttpClient } from '@angular/common/http';
   providedIn: 'root'
 })
 export class ServicioService {
-  url = 'http://www.backsopes.tk:3000/';
-  
+  // url = 'http://www.backsopes.tk:3000/';
+  url = 'http://localhost:3000/';
+
   constructor(private http: HttpClient) { }
 
 
@@ -21,7 +22,7 @@ export class ServicioService {
   }
   // Los metodos de redis-------------------------------------------------------------------------------------------------------------------
   obtenerClaves(){
-    return this.http.get<string>(this.url + 'claves');
+    return this.http.get<string[]>(this.url + 'claves');
   }
 
   obtenerUltimoCaso(id: string){
