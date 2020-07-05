@@ -6,8 +6,8 @@ import { HttpClient } from '@angular/common/http';
   providedIn: 'root'
 })
 export class ServicioService {
-  // url = 'http://www.backsopes.tk:3000/';
-  url = 'http://localhost:3000/';
+  url = 'http://www.backsopes.tk:3000/';
+  //url = 'http://localhost:3000/';
 
   constructor(private http: HttpClient) { }
 
